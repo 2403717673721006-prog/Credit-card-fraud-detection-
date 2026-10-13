@@ -12,24 +12,17 @@ env/
 venv/
 ENV/
 
-# Large datasets (Dataset acquisition rule: never commit large raw CSV files)
-*.csv
+# Large raw datasets (Dataset acquisition rule: never commit the 150MB raw CSV file)
+ml/data/creditcard.csv
+data/creditcard.csv
 *.zip
 *.tar.gz
-data/creditcard.csv
-ml/data/*.csv
 backend/uploads/*
 !backend/uploads/.gitkeep
 
-# Model artifacts and temp files
-backend/artifacts/*.joblib
-backend/artifacts/*.json
-ml/artifacts/*.joblib
-ml/artifacts/*.json
-ml/artifacts/*.png
+# Temporary databases
 *.db
 *.sqlite3
-!backend/artifacts/.gitkeep
 
 # Node.js
 frontend/node_modules/

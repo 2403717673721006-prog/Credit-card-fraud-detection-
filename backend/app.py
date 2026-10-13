@@ -1,7 +1,7 @@
 import os
 import sys
 from pathlib import Path
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 # Add project root to sys.path
@@ -42,8 +42,22 @@ def create_app():
     app.register_blueprint(predict_bp, url_prefix="/api")
     app.register_blueprint(monitoring_bp, url_prefix="/api")
 
+    # Serve built React frontend from frontend/dist if present
+    frontend_dist = PROJECT_ROOT / "frontend" / "dist"
+    if frontend_dist.exists():
+        @app.route("/", defaults={"path": ""})
+        @app.route("/<path:path>")
+        def serve_frontend(path):
+            if path and (frontend_dist / path).exists():
+                return send_from_directory(str(frontend_dist), path)
+            return send_from_directory(str(frontend_dist), "index.html")
+
     @app.errorhandler(404)
     def handle_not_found(e):
+        if request.path.startswith("/api/"):
+            return jsonify({"error": "Resource not found", "status": 404}), 404
+        if frontend_dist.exists():
+            return send_from_directory(str(frontend_dist), "index.html")
         return jsonify({"error": "Resource not found", "status": 404}), 404
 
     @app.errorhandler(400)

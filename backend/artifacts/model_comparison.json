@@ -1,0 +1,1187 @@
+{
+  "selected_model": "Random Forest",
+  "selection_metric": "Average Precision (PR-AUC)",
+  "selection_rationale": "Because fraud represents only ~0.17% of transactions, raw Accuracy is deeply deceptive (a naive model predicting all zeros achieves 99.83% accuracy). Average Precision summarizes the Area Under the Precision-Recall curve, directly penalizing both false alarms and missed fraud. Random Forest achieved the superior trade-off between detecting high fraud volume and minimizing customer friction.",
+  "models": {
+    "Logistic Regression": {
+      "name": "Logistic Regression",
+      "filename": "logistic_regression.joblib",
+      "description": "Linear classifier with L2 regularization and inverse class frequency weighting.",
+      "accuracy": 0.9755,
+      "precision": 0.0609,
+      "recall": 0.9184,
+      "f1_score": 0.1142,
+      "average_precision": 0.7175,
+      "roc_auc": 0.972,
+      "confusion_matrix": [
+        [
+          55476,
+          1388
+        ],
+        [
+          8,
+          90
+        ]
+      ],
+      "tn": 55476,
+      "fp": 1388,
+      "fn": 8,
+      "tp": 90,
+      "training_time_seconds": 0.869,
+      "evaluation_time_seconds": 0.014,
+      "test_total": 56962,
+      "test_fraud_actual": 98,
+      "test_legit_actual": 56864,
+      "pr_curve": [
+        {
+          "recall": 1.0,
+          "precision": 0.0017
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0018
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0018
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0019
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0019
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.002
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.002
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0021
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0021
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0022
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0023
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0023
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0024
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0025
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0026
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0027
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0028
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.003
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0031
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0032
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0034
+        },
+        {
+          "recall": 0.9796,
+          "precision": 0.0035
+        },
+        {
+          "recall": 0.9796,
+          "precision": 0.0037
+        },
+        {
+          "recall": 0.9796,
+          "precision": 0.004
+        },
+        {
+          "recall": 0.9694,
+          "precision": 0.0042
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.0044
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.0047
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.0051
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.0055
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.006
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0065
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0072
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0081
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0093
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0108
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0129
+        },
+        {
+          "recall": 0.9388,
+          "precision": 0.0159
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0206
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0306
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0594
+        },
+        {
+          "recall": 0.7959,
+          "precision": 0.8387
+        }
+      ],
+      "roc_curve": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0002,
+          "tpr": 0.6224
+        },
+        {
+          "fpr": 0.0002,
+          "tpr": 0.7551
+        },
+        {
+          "fpr": 0.0003,
+          "tpr": 0.7959
+        },
+        {
+          "fpr": 0.0007,
+          "tpr": 0.8367
+        },
+        {
+          "fpr": 0.0014,
+          "tpr": 0.8673
+        },
+        {
+          "fpr": 0.0074,
+          "tpr": 0.8878
+        },
+        {
+          "fpr": 0.0095,
+          "tpr": 0.898
+        },
+        {
+          "fpr": 0.0186,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.0405,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.0496,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.0844,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.0941,
+          "tpr": 0.9388
+        },
+        {
+          "fpr": 0.115,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.1453,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.1721,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.205,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.2654,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.2737,
+          "tpr": 0.9592
+        },
+        {
+          "fpr": 0.306,
+          "tpr": 0.9592
+        },
+        {
+          "fpr": 0.3647,
+          "tpr": 0.9592
+        },
+        {
+          "fpr": 0.3914,
+          "tpr": 0.9592
+        },
+        {
+          "fpr": 0.4151,
+          "tpr": 0.9694
+        },
+        {
+          "fpr": 0.4281,
+          "tpr": 0.9796
+        },
+        {
+          "fpr": 0.5565,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.6015,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.7178,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.8053,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.8606,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.9107,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9329,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9395,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9435,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9515,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9672,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9711,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9762,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9897,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9901,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9974,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    "Decision Tree": {
+      "name": "Decision Tree",
+      "filename": "decision_tree.joblib",
+      "description": "Rule-based partition tree optimized with max depth 7 to limit overfitting on noise.",
+      "accuracy": 0.9762,
+      "precision": 0.0576,
+      "recall": 0.8367,
+      "f1_score": 0.1078,
+      "average_precision": 0.4615,
+      "roc_auc": 0.8778,
+      "confusion_matrix": [
+        [
+          55522,
+          1342
+        ],
+        [
+          16,
+          82
+        ]
+      ],
+      "tn": 55522,
+      "fp": 1342,
+      "fn": 16,
+      "tp": 82,
+      "training_time_seconds": 5.76,
+      "evaluation_time_seconds": 0.02,
+      "test_total": 56962,
+      "test_fraud_actual": 98,
+      "test_legit_actual": 56864,
+      "pr_curve": [
+        {
+          "recall": 1.0,
+          "precision": 0.0017
+        },
+        {
+          "recall": 0.8776,
+          "precision": 0.002
+        },
+        {
+          "recall": 0.8469,
+          "precision": 0.0198
+        },
+        {
+          "recall": 0.8469,
+          "precision": 0.0348
+        },
+        {
+          "recall": 0.8367,
+          "precision": 0.0576
+        },
+        {
+          "recall": 0.8265,
+          "precision": 0.0698
+        },
+        {
+          "recall": 0.8265,
+          "precision": 0.1067
+        },
+        {
+          "recall": 0.8163,
+          "precision": 0.1423
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.295
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.4185
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.4611
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.4843
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.5033
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.5461
+        },
+        {
+          "recall": 0.7857,
+          "precision": 0.5789
+        },
+        {
+          "recall": 0.0,
+          "precision": 1.0
+        }
+      ],
+      "roc_curve": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.001,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0011,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0013,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0014,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0016,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0019,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0032,
+          "tpr": 0.7857
+        },
+        {
+          "fpr": 0.0085,
+          "tpr": 0.8163
+        },
+        {
+          "fpr": 0.0119,
+          "tpr": 0.8265
+        },
+        {
+          "fpr": 0.019,
+          "tpr": 0.8265
+        },
+        {
+          "fpr": 0.0236,
+          "tpr": 0.8367
+        },
+        {
+          "fpr": 0.0404,
+          "tpr": 0.8469
+        },
+        {
+          "fpr": 0.0721,
+          "tpr": 0.8469
+        },
+        {
+          "fpr": 0.7663,
+          "tpr": 0.8776
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    },
+    "Random Forest": {
+      "name": "Random Forest",
+      "filename": "random_forest.joblib",
+      "description": "Ensemble of 100 decorrelated decision trees with balanced bootstrap aggregation.",
+      "accuracy": 0.9993,
+      "precision": 0.7736,
+      "recall": 0.8367,
+      "f1_score": 0.8039,
+      "average_precision": 0.8444,
+      "roc_auc": 0.9785,
+      "confusion_matrix": [
+        [
+          56840,
+          24
+        ],
+        [
+          16,
+          82
+        ]
+      ],
+      "tn": 56840,
+      "fp": 24,
+      "fn": 16,
+      "tp": 82,
+      "training_time_seconds": 13.923,
+      "evaluation_time_seconds": 0.111,
+      "test_total": 56962,
+      "test_fraud_actual": 98,
+      "test_legit_actual": 56864,
+      "pr_curve": [
+        {
+          "recall": 1.0,
+          "precision": 0.0017
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0018
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0019
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0019
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.002
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0021
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0022
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0022
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0023
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0024
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0025
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.0026
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0027
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0028
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0029
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0031
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0032
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0034
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0036
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0038
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.004
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0042
+        },
+        {
+          "recall": 0.9898,
+          "precision": 0.0044
+        },
+        {
+          "recall": 0.9694,
+          "precision": 0.0046
+        },
+        {
+          "recall": 0.9694,
+          "precision": 0.0049
+        },
+        {
+          "recall": 0.9694,
+          "precision": 0.0052
+        },
+        {
+          "recall": 0.9694,
+          "precision": 0.0056
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.006
+        },
+        {
+          "recall": 0.9592,
+          "precision": 0.0065
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0071
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0078
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0086
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0097
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0111
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0129
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0155
+        },
+        {
+          "recall": 0.949,
+          "precision": 0.0194
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0252
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0376
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0731
+        },
+        {
+          "recall": 0.4082,
+          "precision": 0.9756
+        }
+      ],
+      "roc_curve": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0751,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.1573,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.2192,
+          "tpr": 0.949
+        },
+        {
+          "fpr": 0.262,
+          "tpr": 0.9592
+        },
+        {
+          "fpr": 0.3021,
+          "tpr": 0.9694
+        },
+        {
+          "fpr": 0.3378,
+          "tpr": 0.9694
+        },
+        {
+          "fpr": 0.3718,
+          "tpr": 0.9694
+        },
+        {
+          "fpr": 0.4074,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.4411,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.4671,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.4923,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.5152,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.5389,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.5592,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.5806,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.5991,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.6213,
+          "tpr": 0.9898
+        },
+        {
+          "fpr": 0.6405,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.6592,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.6765,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.6935,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7099,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7287,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7465,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7638,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7815,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.7958,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8119,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8268,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8435,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8596,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8759,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.8897,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9055,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9207,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9359,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9513,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9661,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9801,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.9985,
+          "tpr": 1.0
+        }
+      ]
+    },
+    "K-Nearest Neighbors": {
+      "name": "K-Nearest Neighbors",
+      "filename": "k_nearest_neighbors.joblib",
+      "description": "Instance-based non-parametric classifier with inverse-distance weighting.",
+      "accuracy": 0.9944,
+      "precision": 0.2236,
+      "recall": 0.9082,
+      "f1_score": 0.3589,
+      "average_precision": 0.4794,
+      "roc_auc": 0.9602,
+      "confusion_matrix": [
+        [
+          56555,
+          309
+        ],
+        [
+          9,
+          89
+        ]
+      ],
+      "tn": 56555,
+      "fp": 309,
+      "fn": 9,
+      "tp": 89,
+      "training_time_seconds": 0.001,
+      "evaluation_time_seconds": 1.909,
+      "test_total": 56962,
+      "test_fraud_actual": 98,
+      "test_legit_actual": 56864,
+      "pr_curve": [
+        {
+          "recall": 1.0,
+          "precision": 0.0017
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0234
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.024
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0246
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0252
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0259
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0267
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0274
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0282
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0291
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.03
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.031
+        },
+        {
+          "recall": 0.9286,
+          "precision": 0.0321
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0328
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.034
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0353
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0367
+        },
+        {
+          "recall": 0.9184,
+          "precision": 0.0382
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0393
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0411
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.043
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0451
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0474
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0499
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0528
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.056
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0596
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0637
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0684
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0738
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0802
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0878
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.0969
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.1083
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.1226
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.1413
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.1667
+        },
+        {
+          "recall": 0.9082,
+          "precision": 0.2032
+        },
+        {
+          "recall": 0.898,
+          "precision": 0.2573
+        },
+        {
+          "recall": 0.8673,
+          "precision": 0.3455
+        },
+        {
+          "recall": 0.8265,
+          "precision": 0.54
+        }
+      ],
+      "roc_curve": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0012,
+          "tpr": 0.8265
+        },
+        {
+          "fpr": 0.0012,
+          "tpr": 0.8265
+        },
+        {
+          "fpr": 0.0012,
+          "tpr": 0.8367
+        },
+        {
+          "fpr": 0.0015,
+          "tpr": 0.8367
+        },
+        {
+          "fpr": 0.0015,
+          "tpr": 0.8469
+        },
+        {
+          "fpr": 0.0024,
+          "tpr": 0.8469
+        },
+        {
+          "fpr": 0.0024,
+          "tpr": 0.8571
+        },
+        {
+          "fpr": 0.0027,
+          "tpr": 0.8571
+        },
+        {
+          "fpr": 0.0027,
+          "tpr": 0.8673
+        },
+        {
+          "fpr": 0.0035,
+          "tpr": 0.8673
+        },
+        {
+          "fpr": 0.0035,
+          "tpr": 0.8776
+        },
+        {
+          "fpr": 0.0036,
+          "tpr": 0.8776
+        },
+        {
+          "fpr": 0.0036,
+          "tpr": 0.8878
+        },
+        {
+          "fpr": 0.0041,
+          "tpr": 0.8878
+        },
+        {
+          "fpr": 0.0041,
+          "tpr": 0.898
+        },
+        {
+          "fpr": 0.0054,
+          "tpr": 0.898
+        },
+        {
+          "fpr": 0.0054,
+          "tpr": 0.9082
+        },
+        {
+          "fpr": 0.0387,
+          "tpr": 0.9082
+        },
+        {
+          "fpr": 0.0387,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.048,
+          "tpr": 0.9184
+        },
+        {
+          "fpr": 0.048,
+          "tpr": 0.9286
+        },
+        {
+          "fpr": 0.0685,
+          "tpr": 0.9286
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ]
+    }
+  }
+}

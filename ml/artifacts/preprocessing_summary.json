@@ -1,0 +1,13 @@
+{
+  "train_samples": 227845,
+  "test_samples": 56962,
+  "train_legit": 227451,
+  "train_fraud": 394,
+  "test_legit": 56864,
+  "test_fraud": 98,
+  "test_size_fraction": 0.2,
+  "random_state": 42,
+  "scaling_method": "RobustScaler (Time, Amount)",
+  "fraud_percentage_train": 0.1729,
+  "fraud_percentage_test": 0.172
+}

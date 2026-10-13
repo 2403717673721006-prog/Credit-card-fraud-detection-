@@ -7,9 +7,10 @@ health_bp = Blueprint("health", __name__)
 
 @health_bp.route("/health", methods=["GET"])
 def health_check():
-    dataset_ready = DATASET_PATH.exists()
+    dataset_ready = DATASET_PATH.exists() or (ARTIFACTS_DIR / "simulation_sample.csv").exists()
     model_ready = (ARTIFACTS_DIR / "selected_model.joblib").exists()
     scaler_ready = (ARTIFACTS_DIR / "scaler.joblib").exists()
+
 
     return jsonify({
         "status": "healthy",

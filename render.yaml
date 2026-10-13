@@ -1,0 +1,16 @@
+# Render Blueprint Specification for CreditGuard
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: creditguard
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt && cd frontend && npm install && npm run build && cd .."
+    startCommand: "gunicorn backend.app:app"
+    envVars:
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: CORS_ORIGINS
+        value: "*"

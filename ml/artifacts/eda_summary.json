@@ -1,0 +1,103 @@
+{
+  "total_records": 284807,
+  "features_count": 30,
+  "legitimate_count": 284315,
+  "fraud_count": 492,
+  "fraud_percentage": 0.1727,
+  "imbalance_ratio": "577:1",
+  "missing_values_count": 0,
+  "duplicate_rows": 1081,
+  "time_span_hours": 48.0,
+  "amount_stats_legitimate": {
+    "mean": 88.29,
+    "median": 22.0,
+    "std": 250.11,
+    "max": 25691.16,
+    "q25": 5.65,
+    "q75": 77.05
+  },
+  "amount_stats_fraudulent": {
+    "mean": 122.21,
+    "median": 9.25,
+    "std": 256.68,
+    "max": 2125.87,
+    "q25": 1.0,
+    "q75": 105.89
+  },
+  "amount_distribution_bins": [
+    {
+      "range": "$0-5",
+      "legitimate": 67242,
+      "fraud": 221,
+      "fraud_rate": 0.3276
+    },
+    {
+      "range": "$5-20",
+      "legitimate": 69615,
+      "fraud": 50,
+      "fraud_rate": 0.0718
+    },
+    {
+      "range": "$20-50",
+      "legitimate": 52542,
+      "fraud": 34,
+      "fraud_rate": 0.0647
+    },
+    {
+      "range": "$50-100",
+      "legitimate": 37661,
+      "fraud": 57,
+      "fraud_rate": 0.1511
+    },
+    {
+      "range": "$100-250",
+      "legitimate": 34426,
+      "fraud": 56,
+      "fraud_rate": 0.1624
+    },
+    {
+      "range": "$250-500",
+      "legitimate": 13372,
+      "fraud": 39,
+      "fraud_rate": 0.2908
+    },
+    {
+      "range": "$500-1k",
+      "legitimate": 6397,
+      "fraud": 26,
+      "fraud_rate": 0.4048
+    },
+    {
+      "range": "$1k-5k",
+      "legitimate": 3005,
+      "fraud": 9,
+      "fraud_rate": 0.2986
+    },
+    {
+      "range": "$5k+",
+      "legitimate": 55,
+      "fraud": 0,
+      "fraud_rate": 0.0
+    }
+  ],
+  "top_correlated_features": {
+    "V17": -0.3265,
+    "V14": -0.3025,
+    "V12": -0.2606,
+    "V10": -0.2169,
+    "V16": -0.1965,
+    "V19": 0.0348,
+    "V21": 0.0404,
+    "V2": 0.0913,
+    "V4": 0.1334,
+    "V11": 0.1549
+  },
+  "key_insights": [
+    "Severe class imbalance: Only 492 fraud cases out of 284,807 transactions (~0.173%), an imbalance of 577:1.",
+    "Transaction Amounts: Fraudulent transactions have a higher median ($9.25 vs $22.00) and distinct clustering, but legitimate transactions reach much higher maximums ($25,691.16 vs $2,125.87).",
+    "Negative Correlations: V14 (r = -0.30), V12 (r = -0.26), and V10 (r = -0.22) show strong inverse correlation with fraud.",
+    "Positive Correlations: V4 (r = +0.13), V11 (r = +0.15), and V2 (r = +0.09) show strong positive correlation with fraud.",
+    "Zero Missing Values: The Kaggle dataset is completely populated with zero nulls across all 30 features.",
+    "1,081 Duplicates: Found in identical PCA coordinates; must be noted in data-quality audit."
+  ]
+}

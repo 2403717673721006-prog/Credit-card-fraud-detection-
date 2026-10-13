@@ -45,6 +45,13 @@ class DatasetService:
             return self._df_cache
 
         if not DATASET_PATH.exists():
+            # Fallback to simulation sample for cloud environments without full 150MB CSV
+            sample_path = ARTIFACTS_DIR / "simulation_sample.csv"
+            if sample_path.exists():
+                df = pd.read_csv(sample_path)
+                df["transaction_id"] = [f"TX-{i:06d}" for i in range(len(df))]
+                self._df_cache = df
+                return self._df_cache
             raise FileNotFoundError(f"Dataset not found at {DATASET_PATH}")
 
         # Read dataset
